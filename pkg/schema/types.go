@@ -14,6 +14,7 @@ const (
 	SourceAirPlayKnown         TrackSource = "airplay_known"
 	SourceAirPlayStream        TrackSource = "airplay_stream"
 	SourceAirPlayFingerprinted TrackSource = "airplay_fingerprinted"
+	SourceSargam               TrackSource = "sargam" // imported from a .sargam package
 )
 
 // SwipeSignal is one of the four swipe vocabulary signals.
