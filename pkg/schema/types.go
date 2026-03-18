@@ -41,8 +41,9 @@ type Track struct {
 	AnalysisTier *int        `json:"analysis_tier,omitempty"`
 	Wishlist     bool        `json:"wishlist"`
 	AnalysedAt   *time.Time  `json:"analysed_at,omitempty"`
-	BPM          *float64    `json:"bpm,omitempty"` // beats per minute; set by Tier-2 analysis
-	Key          *string     `json:"key,omitempty"` // musical key e.g. "C major"; set by Tier-2 analysis
+	BPM          *float64    `json:"bpm,omitempty"`   // beats per minute; set by Tier-2 analysis
+	Key          *string     `json:"key,omitempty"`   // musical key e.g. "C major"; set by Tier-2 analysis
+	Genre        *string     `json:"genre,omitempty"` // heuristic genre label; set by Tier-2 analysis
 
 	// Mood fields — populated by the MoodAnalyser during Tier-2 analysis.
 	// Values are in the range [0.0, 1.0].
