@@ -4,8 +4,8 @@ Shared Go modules for the Ragini ecosystem.
 
 | Package | Contents |
 |---|---|
-| `pkg/schema` | SurrealDB schema types (Track, Profile, PlayEvent, SwipeEvent, TasteVector) |
-| `pkg/sargam` | Sargam Synthesis Package format structures |
+| `pkg/schema` | SurrealDB schema types (Track, Profile, PlayEvent, SwipeEvent, TasteVector, Genre) |
+| `pkg/sargam` | Sargam Music Passport format structures |
 | `pkg/qdrant` | Qdrant collection definitions and query helpers |
 | `pkg/score` | Sargam Score algorithm (Go reference implementation) |
 
