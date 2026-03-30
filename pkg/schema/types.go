@@ -70,6 +70,20 @@ type Track struct {
 	LyricTags   []TagWeight `json:"lyric_tags,omitempty"`
 	Keywords    []string    `json:"keywords,omitempty"`
 	Characters  []string    `json:"characters,omitempty"`
+
+	// TagsText is a denormalized space-separated string of all taxonomy tag values.
+	// Updated whenever join tables change; indexed by FTS5 for full-text search.
+	TagsText string `json:"tags_text,omitempty"`
+}
+
+// TrackTaxonomy holds all join-table taxonomy rows for a single track.
+type TrackTaxonomy struct {
+	Moods       []TagWeight
+	Genres      []TagWeight
+	Instruments []TagWeight
+	LyricTags   []TagWeight
+	Keywords    []string
+	Characters  []string
 }
 
 // TagWeight pairs a label with its confidence weight and source provenance.
