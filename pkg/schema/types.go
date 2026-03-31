@@ -49,7 +49,7 @@ type Track struct {
 	Arousal *float32 `json:"arousal,omitempty"`
 	Energy  *float32 `json:"energy,omitempty"`
 
-	// Embeddings (384-dim float32, little-endian)
+	// Embeddings (N × float32 little-endian; N determined by *_embed_model on the track record)
 	AudioEmbedding []float32 `json:"audio_embedding,omitempty"`
 	LyricEmbedding []float32 `json:"lyric_embedding,omitempty"`
 
