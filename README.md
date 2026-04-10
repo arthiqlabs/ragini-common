@@ -11,8 +11,8 @@ Shared Go modules for the Ragini ecosystem.
 
 ```go
 import (
-    "github.com/ragini-audio/ragini-common/pkg/schema"
-    "github.com/ragini-audio/ragini-common/pkg/enrichment"
+    "github.com/arthiqlabs/ragini-common/pkg/schema"
+    "github.com/arthiqlabs/ragini-common/pkg/enrichment"
 )
 ```
 

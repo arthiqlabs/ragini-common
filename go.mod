@@ -1,3 +1,3 @@
-module github.com/ragini-audio/ragini-common
+module github.com/arthiqlabs/ragini-common
 
 go 1.22
