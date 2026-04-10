@@ -50,6 +50,12 @@ New types added:
 |-----------|-------|
 | `TagsText string` | Denormalized space-separated string of all taxonomy tag values; updated atomically after every join-table write; indexed by FTS5 porter stemming in both Ragini and Sargam |
 
+### Fields added (2026-04-10)
+
+- `AudioEmbedModel`, `LyricEmbedModel` — model provenance for embeddings
+- `Fingerprint` — chromaprint acoustic identity value
+- `TagSourceAcoustic`, `TagSourceLLM`, `TagSourceID3`, `TagSourceManual` — typed constants for `TagWeight.Source`
+
 ## pkg/enrichment helpers
 
 `BuildTagSentence(moods, genres, lyricTags, keywords []string) string`

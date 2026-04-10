@@ -63,6 +63,15 @@ type Track struct {
 	ISRC     *string `json:"isrc,omitempty"`
 	AcoustID *string `json:"acoustid,omitempty"`
 
+	// Model provenance — identifies which embedding model produced the vectors.
+	// Populated from DB columns audio_embed_model / lyric_embed_model.
+	AudioEmbedModel string `json:"audio_embed_model,omitempty"`
+	LyricEmbedModel string `json:"lyric_embed_model,omitempty"`
+
+	// Chromaprint fingerprint — canonical acoustic identity.
+	// Track ID is SHA-256(Fingerprint).
+	Fingerprint string `json:"fingerprint,omitempty"`
+
 	// Taxonomy join fields — populated by store when requested
 	Moods       []TagWeight `json:"moods,omitempty"`
 	Genres      []TagWeight `json:"genres,omitempty"`
@@ -92,6 +101,14 @@ type TagWeight struct {
 	Weight float64 `json:"weight"`
 	Source string  `json:"source,omitempty"` // "acoustic"|"llm"|"id3"|"manual"
 }
+
+// TagWeightSource constants define the valid provenance values for TagWeight.Source.
+const (
+	TagSourceAcoustic = "acoustic"
+	TagSourceLLM      = "llm"
+	TagSourceID3      = "id3"
+	TagSourceManual   = "manual"
+)
 
 // Profile is a named user profile within a Ragini instance.
 type Profile struct {
